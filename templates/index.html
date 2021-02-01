@@ -23,9 +23,15 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="introduction">
-                            <span>O</span>
-                            <span>O</span>
-                            <span>O</span>
+                            <a mdbBtn floating="true" size="lg" gradient="purple" mdbWavesEffect>
+                                <mdb-icon fas icon="bolt"></mdb-icon>
+                              </a>
+                              <a mdbBtn floating="true" gradient="peach" mdbWavesEffect>
+                                <mdb-icon fas icon="leaf"></mdb-icon>
+                              </a>
+                              <a mdbBtn floating="true" size="sm" gradient="blue" mdbWavesEffect>
+                                <mdb-icon fas icon="star"></mdb-icon>
+                              </a>
                         </div> <!--!Introduction-->
                     </div> 
                     <div class="col-sm-6">
@@ -39,59 +45,144 @@
             </div> <!--!tilte-intro-->
         </div>
     </div> <!-- !HEADER-TOP -->
-<!--MENU-NAVIGATION-->
-    <div class="menu-navtab">
-        <div class="container">
-            <div class="row">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                  
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                          </div>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link disabled" href="#">Disabled</a>
-                        </li>
-                      </ul>
-                      <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                      </form>
-                    </div>
-                  </nav>
+
+<!--HEADER-->
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1><a href="index.html" id="logo-foxv"><img src="/static/img/logo_foxvboutique.png"></a></h1>
             </div>
         </div>
     </div>
+</div><!--HEADER-->
+
+
+<!--MENU-NAVIGATION-->
+    <div class="nav-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Foxv Boutique</a>
+
+                        <div class="navbar-collapse collapse " id="navbarContent">
+                            <ul class="navbar-nav mr-auto nav-btn">
+                                <li class="nav-item">
+                                    <!-- active -->
+                                    <a id="nav-menu-btn-home" class="nav-link" href="index.html">home </a>
+                                    <!-- <span class="sr-only">(current)</span> -->
+                                </li>
+                                <li class="nav-item  dropdown menu-area">
+                                    <!-- active -->
+                                    <a class="nav-link" href="" id="mega-one" data-toggle="dropdown" aria-haspopup="true" aria-expanded="f">thời trang nữ</a>
+                                    <!-- <span class="sr-only">(current)</span> -->
+                                    <div class="dropdown-menu mega-area" aria-labelledby="mega-one">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-lg-3">
+                                                <h5>thời trang nữ</h5>
+                                                <a href="#" class="dropdown-item">áo</a>
+                                                <a href="#" class="dropdown-item">quần</a>
+                                                <a href="#" class="dropdown-item">trang sức</a>
+                                                <a href="#" class="dropdown-item">phụ kiện</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item ">
+                                    <!-- active -->
+                                    <a class="nav-link" href="#">hương thơm</a>
+                                    <!-- <span class="sr-only">(current)</span> -->
+                                </li>
+                                <li class="nav-item ">
+                                    <!-- active -->
+                                    <a class="nav-link" href="#">trang điểm</a>
+                                    <!-- <span class="sr-only">(current)</span> -->
+                                </li>
+                                <li class="nav-item">
+                                    <!-- active -->
+                                    <a class="nav-link " href="#">sự kiện quà tặng</a>
+                                    <!-- <span class="sr-only">(current)</span> -->
+                                </li>
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div><!-- row -->
+        </div> <!-- container -->
+    </div><!-- nav-menu -->
 
 
 <!--BANNER-MAIN-->
-    <div class="banner-main">
-        <div class="container">
-            <div class="row">
+<div class="cover-items-slider">
+    <div class="container">
+        <div class="slider-container">
+            <div class="slide-block">
+                
+                <div id="slide-1" class="slide active">
+                    <img src="/static/img/slide-01.webp" alt="">
+                </div>
+                <div id="slide-2" class="slide">
+                    <img src="/static/img/slide-02.webp" alt="">
+                </div>
+                <div id="slide-3" class="slide">
+                    <img src="/static/img/slide-03.webp" alt="">
+                </div>
+                <div id="slide-4" class="slide">
+                    <img src="/static/img/slide-04.png" alt="">
+                </div>
+                
+            </div>
+            <div class="slick-slider slick-initialized">
+                <div class="controls">
+                    <span id="btn-prev"><i class="fas fa-chevron-circle-left"></i></span>
+                    <span id="btn-next"><i class="fas fa-chevron-circle-right"></i></span>
+                </div>
+                <div class="slick-list">
+                    <div class="slick-buttom">
+                        <!--4 cir-btn-->
+                        <ul class="slick-dots">
+                            <li id="dot-1" class="dot active"></li>
+                            <li id="dot-2" class="dot"></li>
+                            <li id="dot-3" class="dot"></li>
+                            <li id="dot-4" class="dot"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slick-bottom">
 
+                </div>
             </div>
         </div>
-    </div> <!-- !BANNER-MAIN-->
+    </div>
+</div> <!-- !BANNER-MAIN-->
 
-    
+<!-- /////////////////////////////////////////////
+//CONTENT-GRID////////////////////////////////////
+////////////////////////////////////////////// -->
+<div class="content-grid">
+    <div class="containe grid-box">
+        <div class="row ">
+            <div class="col-sm-4 grid-box">
+                <h1><a href="index.html" id="logo-foxv"><img src="/static/img/content-grid-1.jpg"></a></h1>
+                <h1><a href="index.html" id="logo-foxv"><img src="/static/img/content-grid-1.jpg"></a></h1>
+            </div>
+            <div class="col-lg-4 grid-box">
+                <h1><a href="index.html" id="logo-foxv"><img src="/static/img/content-grid-1.jpg"></a></h1>
+                <h1><a href="index.html" id="logo-foxv"><img src="/static/img/content-grid-1.jpg"></a></h1>
+            </div>
+            <div class="col-lg-4">
+                <h1><a href="index.html" id="logo-foxv"><img src="/static/img/content-grid-1.jpg"></a></h1>
+            </div>
+        </div>
+    </div>
+</div><!-- !CONTENT-GRID -->
 </body>
 </html>
