@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="/static/css/style.css">
 
 
-
+    <script src="/static/font-awesome/all.js"></script>
     <script src="/static/js/jquery-3.5.1.min.js"></script> <!--jquery-3.5.1.min.js -> full standard -->
     <script src="/static/js/bootstrap413.js"></script>
-   <script src="/static/js/VICscript.js"></script>
+    <script src="/static/js/VICscript.js"></script>
 
 </head>
 <body>
@@ -76,13 +76,24 @@
                                     <div class="dropdown-menu mega-area" aria-labelledby="mega-one">
                                         <div class="row">                                
                                             <div class="col-sm-6 col-lg-3">
-                                                <a href="#quanao" class="dropdown-item" style="font-weight: bold">QUẦN ÁO</a>
-                                                <a href="#" class="dropdown-item">Combo quần áo</a>
-                                                <a href="#" class="dropdown-item">Combo quần áo</a>
-                                                <a href="#" class="dropdown-item">TRANG SỨC</a>
-                                                <a href="#" class="dropdown-item">PHỤ KIỆN</a>
-                                                <div class="dropdown-divider"></div>
-                                            </div>
+                                                <div class="mega-area-content">
+                                                    <a href="#quanao" class="dropdown-item" style="font-weight: bold">QUÀ TẶNG</a>
+                                                    <img src="/static/img/20210203-main-nav-Ao-Quan.jpg" alt="gift">
+                                                    <ul class="mega-area-content-list">
+                                                            <a href="#" class="dropdown-item">Tặng cho bạn trai</a>
+                                                            <a href="#" class="dropdown-item">Tặng cho cha mẹ</a>
+                                                    </ul>
+                                                    <div class="dropdown-divider"></div>
+                                                </div>
+                                                <div class="mega-area-content">
+                                                    <a href="#quanao" class="dropdown-item" style="font-weight: bold">WAHT </a>
+                                                    <img src="/static/img/20210203_main-nav-push.webp" alt="gift">
+                                                    <ul class="mega-area-content-list">
+                                                            <a href="#" class="dropdown-item">Gift</a>
+                                                    </ul>
+                                                    <div class="dropdown-divider"></div>
+                                               </div>
+                                            </div><!-- /col -->
                                             <div class="col-sm-6 col-lg-2">
                                                 <a href="#quanao" class="dropdown-item" style="font-weight: bold">ÁO</a>
                                                 <a href="#" class="dropdown-item">Áo sơ mi</a>
@@ -242,10 +253,16 @@
 <div class="universe">
     <div class="container">
         <div class="row">
-            <div class="col-sm">
-                <ul class="universe-grid universe-grid--with-cover"></ul>
-                    <li class="universe-card universe-card-lg"></li>
-                    <li class="universe-card">
+            <div class="universe-cover">
+                <div class="col-md-12">
+                    <div class="img-universe-cover">
+                        <img src="/static/img/universe-card-01.webp" alt="" srcset="">
+                    </div>
+                </div>
+            </div><!--universe-cover-->
+            <div class="universe-card-grid">
+                <div class="col-sm-3">
+                    <div class="universe-card">
                         <a href="#">
                             <div class="image">
                                 <img src="/static/img/universe-card-01.webp" alt="" srcset="">
@@ -254,8 +271,10 @@
                                 ÁO ĐẸP
                             </div>
                         </a>
-                    </li>
-                    <li class="universe-card">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="universe-card">
                         <a href="#">
                             <div class="image">
                                 <img src="/static/img/universe-card-01.webp" alt="" srcset="">
@@ -264,8 +283,10 @@
                                 ÁO ĐẸP
                             </div>
                         </a>
-                    </li>
-                    <li class="universe-card">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="universe-card">
                         <a href="#">
                             <div class="image">
                                 <img src="/static/img/universe-card-01.webp" alt="" srcset="">
@@ -274,7 +295,10 @@
                                 ÁO ĐẸP
                             </div>
                         </a>
-                    </li><li class="universe-card">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="universe-card">
                         <a href="#">
                             <div class="image">
                                 <img src="/static/img/universe-card-01.webp" alt="" srcset="">
@@ -283,11 +307,55 @@
                                 ÁO ĐẸP
                             </div>
                         </a>
-                    </li>
-                </ul><!-- universe-grid -->
-            </div>
+                    </div>
+                </div>
+            </div><!--universe-cover-->
+        </div><!--row-->
+
+            <!-- <div class="universe-grid universe-grid--with-cover"></ul>
         </div>
-    </div>
+        <div class="row">
+            <div class="universe-card">
+                <a href="#">
+                    <div class="image">
+                        <img src="/static/img/universe-card-01.webp" alt="" srcset="">
+                    </div>
+                    <div class="universe-card-text">
+                        ÁO ĐẸP
+                    </div>
+                </a>
+            </div>
+            <div class="universe-card">
+                <a href="#">
+                    <div class="image">
+                        <img src="/static/img/universe-card-01.webp" alt="" srcset="">
+                    </div>
+                    <div class="universe-card-text">
+                        ÁO ĐẸP
+                    </div>
+                </a>
+            </div>
+            <li class="universe-card">
+                <a href="#">
+                    <div class="image">
+                        <img src="/static/img/universe-card-01.webp" alt="" srcset="">
+                    </div>
+                    <div class="universe-card-text">
+                        ÁO ĐẸP
+                    </div>
+                </a>
+            </li><li class="universe-card">
+                <a href="#">
+                    <div class="image">
+                        <img src="/static/img/universe-card-01.webp" alt="" srcset="">
+                    </div>
+                    <div class="universe-card-text">
+                        ÁO ĐẸP
+                    </div>
+                </a>
+            </li> -->
+
+    </div><!--container-->
 </div><!-- universe -->
 
 </body>
