@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.header-top {
+    background: black;
+    height: 35px;
+    color: white;
+    margin-top: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: burlywood;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+}
+/*////////////////////////////////////////////////
+//MENU NAVIGATION/////////////////////////////////
+////////////////////////////////////////////////*/
+.logo-brand {
+    margin-left: 50px;
+}
+
+.nav-btn {
+    font-size: 14px !important;
+    /* text-transform: uppercase; */
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.menu-area {
+    position: static;
+}
+
+.mega-area {
+    position: absolute;
+    width: 100%;    
+    left: 0;
+    right: 0;
+    padding: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.mega-area-content > img {
+    width: 250px;
+}
+
+/*////////////////////////////////////////////////
+//SLIDE///////////////////////////////////////////
+////////////////////////////////////////////////*/
+.cover-items-slider {
+    margin-top: 22px;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide-block {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.slide-block .slide {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slide-block .slide.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.controls span{
+    color: black;
+    opacity: 60%;
+    font-size: 40px;
+}
+
+span#btn-prev{
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    z-index: 10;
+    cursor: pointer;
+}
+span#btn-next{
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    z-index: 10;
+    cursor: pointer;
+}
+
+
+span#btn-slide {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.slick-dots {
+    position: absolute;
+    z-index: 10;
+    width: 100px;
+    bottom: 10%;
+    left: 50%;
+    margin-left: -50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slick-dots .dot {
+    background: black;
+    width: 20px;
+    height: 20px;
+    opacity: 50%;
+    list-style: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: 0.6s;
+}
+
+.slick-dots .dot.active {
+    opacity: 90%;
+}
+/*
+!!!CONTROL BUTTON SLICK
+*/
+
+/*
+###ANIMATION SLIDE
+*/
+
+.disappear-left{
+    animation: disappear-left 1s forwards; /* Tên hiệu ứng Chạy xong, giữ nguyên trạng thái*/
+}
+@-webkit-keyframes disappear-left{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+.appear-left{
+    animation: appear-left 1s forwards; /* Tên hiệu ứng Chạy xong, giữ nguyên trạng thái*/
+}
+@-webkit-keyframes appear-left{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+.disappear-right{
+    animation: disappear-right 1s forwards; /* Tên hiệu ứng Chạy xong, giữ nguyên trạng thái*/
+}
+@-webkit-keyframes disappear-right{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+
+
+.appear-right{
+    animation: appear-right 1s forwards; /* Tên hiệu ứng Chạy xong, giữ nguyên trạng thái*/
+}
+@-webkit-keyframes appear-right{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+/*////////////////////////////////////////////////
+//UNIVERSE-TABPANE-PRODUCT////////////////////////
+////////////////////////////////////////////////*/
+/* ##Price */
+.universe-product-item {
+    position: relative;
+
+}
+.universe-product-item-price {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+}
+
+.universe-span-price {
+    font-size: 15pt;
+    background-color: black;
+}
+/* !Price */
+.universe-span-price-new {
+    color: white;
+    font-weight: bold;
+}
+
+.universe-span-price-old {
+    color: white;
+    text-decoration: line-through;
+}
+.universe-price-bg {
+    background-color: black;
+}
+
+.universe-tab-pane-block {
+    margin-bottom: 40px;
+}
+
+/* ver2 */
+.universe-tab-pane-product img {
+    width: 100%;
+}
+
+.universe-product-item {
+    padding: 10px;
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    background-color: #ddd;
+}
+.nav-tabs .nav-link.active {
+    color: white;
+    background-color: #212529;
+    border-color:#212529;
+}
+/*////////////////////////////////////////////////
+//UNIVERSE////////////////////////////////////////
+////////////////////////////////////////////////*/
+.niverse-cover-item {
+    margin-bottom:30px;
+}
+.universe-title {
+    margin: 10px;
+}
+.universe-figure img {
+    width: 100%;
+    height: auto;
+}
+
+.universe-a, .universe-a:hover {/* Global */
+    color: black;
+    text-decoration: none;
+}
+
+.universe-cover img {
+    width: 100%;
+    height: auto;
+}
+
+.universe-figure img {
+    width: 100%;
+    height: auto;
+}
+
+.universe-h3 {
+    font-size: 13pt;
+}
+
+.universe-h3-product {
+    font-size: 13pt;
+    text-align: center;
+}
+@media (min-width: 321px) {
+    .universe-grid-item{
+        margin: 0px 50px 0px 50px;
+    }
+}
+
+@media (min-width: 768px) {
+    .universe-grid-item{
+        margin: 0px;
+    }
+}
+/*////////////////////////////////////////////////
+//FOOTER//////////////////////////////////////////
+////////////////////////////////////////////////*/
+
+.universe-ul a, .universe-ul a:hover, .footer-top p, .universe-footer-title {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bot-contract {
+    color: black;
+}
+
+.footer-top{
+    background-color: #212529;
+    padding: 20px 60px 10px 60px;
+}
+.footer-bot{
+    background-color: #ddd;
+    padding: 10px 60px 10px 60px;
+}
+
+@media (min-width: 321px) {
+    section {
+        margin-top: 20px;
+    }
+    footer {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    section {
+        margin: 20px 0px 20px 0px;
+    }   
+    footer {
+        margin-top: 50px;
+    }
+}
+/*////////////////////////////////////////////////
+//RESPONTIVE//////////////////////////////////////
+////////////////////////////////////////////////*/
+.container-full {
+    margin: 0px;
+    padding: 0px;
+}
+
+@media (min-width: 576px) {
+    .container-sm, .container {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container-md, .container-sm, .container {
+      max-width: 720px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container-lg, .container-md, .container-sm, .container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+      max-width: 1140px;
+    }
+  }
+  @media (min-width: 1400px) {
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+      max-width: 1320px;
+    }
+  }
+@media (min-width: 1600px) {
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1470px;
+    }
+}
+/*////////////////////////////////////////////////
+//RESPONTIVE//////////////////////////////////////
+////////////////////////////////////////////////*/
+@media (min-width: 321px) {
+    .universe-grid-item{
+        margin: 0px 50px 0px 50px;
+    }
+    section {
+        
+        margin-top: 20px;
+    }
+    footer {
+        margin-top: 20px;
+    }
+}
+@media (min-width: 576px) {
+
+}
+@media (min-width: 768px) {
+    .universe-grid-item{
+        margin: 0px;
+    }
+    section {
+        margin-top: 20px;    
+    }   
+footer {
+    margin-top: 50px;
+}
+}
+
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+
+}
+@media (min-width: 1400px) {
+
+}
+@media (min-width: 1600px) {
+
+}
