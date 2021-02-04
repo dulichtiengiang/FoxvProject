@@ -17,12 +17,13 @@ $(document).ready(function() {
 
 //Slide: Width x Height
 // for Moblie
-//$('footer div').css({height': variable + 'px'}
+// $('footer div').css({height': variable + 'px'}
     var slide_Width = $('.slider-container').width();
     var slide_Height = slide_Width/2.35;
     $('.slider-container').css({'height': slide_Height});
     console.log(slide_Width);
     console.log(slide_Height);
+
 //Slide: Control
     var autoLoad = setInterval(function() {
         dot_Active = dot_Current + 1;

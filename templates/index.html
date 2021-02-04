@@ -51,8 +51,8 @@
 <!-- /////////////////////////////////////////////
 //MENU NAVIGATION/////////////////////////////////
 ////////////////////////////////////////////// -->
-
 <!-- key2 -->
+<section>
     <div class="nav-menu">
         <div class="container-fluid">
             <div class="row">
@@ -66,7 +66,12 @@
                             <ul class="navbar-nav m-auto">
                                 <li class="nav-item nav-btn">
                                     <!-- active -->
-                                    <a id="nav-menu-btn-home" class="nav-link" href="index.html" style="font-weight: bold;">HOT BÁN CHẠY</a>
+                                    <a id="nav-menu-btn-home" class="nav-link" href="index.html" style="font-weight: bold;">TRANG CHỦ</a>
+                                    <!-- <span class="sr-only">(current)</span> -->
+                                </li>
+                                <li class="nav-item nav-btn dropdown menu-area">
+                                    <!-- active -->
+                                    <a id="nav-menu-btn-home" class="nav-link" href="index.html" style="font-weight: bold;">HOT- BÁN CHẠY</a>
                                     <!-- <span class="sr-only">(current)</span> -->
                                 </li>
                                 <li class="nav-item nav-btn dropdown menu-area">
@@ -160,12 +165,12 @@
             </div><!-- row -->
         </div> <!-- container -->
     </div><!-- nav-menu -->
-
-
+</section>
 <!-- /////////////////////////////////////////////
 //BANNER-MAIN/////////////////////////////////////
 ////////////////////////////////////////////// -->
 <!-- key3 -->
+<section>
 <div class="cover-items-slider">
     <div class="container">
         <div class="slider-container">
@@ -208,155 +213,323 @@
         </div>
     </div>
 </div> <!-- !BANNER-MAIN-->
-
+</section>
 <!-- /////////////////////////////////////////////
 //CONTENT-GRID////////////////////////////////////
 ////////////////////////////////////////////// -->
 <!-- key4 -->
+
 <div class="content-grid">
     <div class="containe grid-box">
         <div class="row ">
-            <div class="col-sm-4 grid-box">
-                <h1><a href="index.html" id="logo-foxv"><img src="/static/img/content-grid-1.jpg"></a></h1>
-                <h1><a href="index.html" id="logo-foxv"><img src="/static/img/content-grid-1.jpg"></a></h1>
-            </div>
-            <div class="col-lg-4 grid-box">
-                <h1><a href="index.html" id="logo-foxv"><img src="/static/img/content-grid-1.jpg"></a></h1>
-                <h1><a href="index.html" id="logo-foxv"><img src="/static/img/content-grid-1.jpg"></a></h1>
-            </div>
-            <div class="col-lg-4">
-                <h1><a href="index.html" id="logo-foxv"><img src="/static/img/content-grid-1.jpg"></a></h1>
-            </div>
         </div>
-    </div>
+    </div><!--containe grid-box-->
 </div><!-- !CONTENT-GRID -->
 
 <!-- /////////////////////////////////////////////
-//products-selection////////////////////////////////////
+//Products-selection////////////////////////////////////
 ////////////////////////////////////////////// -->
 <!-- key5 -->
-<div class="products-selection">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-
+<section>
+    <div class="universe-tab-pane-product">
+        <div class="container">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link universe-a universe-h3 active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Sản phẩm mới</a>
+                    <a class="nav-item nav-link universe-a universe-h3" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Sản phẩm sale</a>
+                    <a class="nav-item nav-link universe-a universe-h3" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Đồ trẻ em</a>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+            <!-- Tab-Pane-1 -->
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="universe-tab-pane">
+                        <div class="container">
+                            <!-- block-1 -->
+                            <div class="universe-tab-pane-block">
+                                <div class="row">                                
+                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                        <div class="universe-product-item">
+                                            <div class="universe-product-item-price">
+                                                <span class="universe-span-price universe-span-price-new">Giá: {{price-new-01}}</span>
+                                                <span class="universe-span-price universe-span-price-old">{{price-old-01}}</span>
+                                            </div>
+                                            <img src="/static/img/universe-product-295x295-01.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                        <div class="universe-product-item">
+                                            <div class="universe-product-item-price">
+                                                <span class="universe-span-price universe-span-price-new">Giá: {{price-new-01}}</span>
+                                                <span class="universe-span-price universe-span-price-old">{{price-old-01}}</span>
+                                            </div>
+                                            <img src="/static/img/universe-product-295x295-02.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                        <div class="universe-product-item">
+                                            <div class="universe-product-item-price">
+                                                <span class="universe-span-price universe-span-price-new">Giá: {{price-new-01}}</span>
+                                                <span class="universe-span-price universe-span-price-old">{{price-old-01}}</span>
+                                            </div>
+                                            <img src="/static/img/universe-product-295x295-03.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                        <div class="universe-product-item">
+                                            <div class="universe-product-item-price">
+                                                <span class="universe-span-price universe-span-price-new">Giá: {{price-new-01}}</span>
+                                                <span class="universe-span-price universe-span-price-old">{{price-old-01}}</span>
+                                            </div>
+                                            <img src="/static/img/universe-product-295x295-04.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="universe-tab-pane-block">
+                                <div class="row">                                
+                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                        <div class="universe-product-item">
+                                            <div class="universe-product-item-price">
+                                                <span class="universe-span-price universe-span-price-new">Giá: {{price-new-01}}</span>
+                                                <span class="universe-span-price universe-span-price-old">{{price-old-01}}</span>
+                                            </div>
+                                            <img src="/static/img/universe-product-295x295-01.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                        <div class="universe-product-item">
+                                            <div class="universe-product-item-price">
+                                                <span class="universe-span-price universe-span-price-new">Giá: {{price-new-01}}</span>
+                                                <span class="universe-span-price universe-span-price-old">{{price-old-01}}</span>
+                                            </div>
+                                            <img src="/static/img/universe-product-295x295-02.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                        <div class="universe-product-item">
+                                            <div class="universe-product-item-price">
+                                                <span class="universe-span-price universe-span-price-new">Giá: {{price-new-01}}</span>
+                                                <span class="universe-span-price universe-span-price-old">{{price-old-01}}</span>
+                                            </div>
+                                            <img src="/static/img/universe-product-295x295-03.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                        <div class="universe-product-item">
+                                            <div class="universe-product-item-price">
+                                                <span class="universe-span-price universe-span-price-new">Giá: {{price-new-01}}</span>
+                                                <span class="universe-span-price universe-span-price-old">{{price-old-01}}</span>
+                                            </div>
+                                            <img src="/static/img/universe-product-295x295-04.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tab-Pane-2 -->
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                sadfasfasdfsadf.</div>
+                <!-- Tab-Pane-3 -->
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                ádfasdfasfasdfsadfsdf.</div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 
 <!-- /////////////////////////////////////////////
 //UNIVERSE////////////////////////////////////////
 ////////////////////////////////////////////// -->
 <!-- key6 -->
-<div class="universe">
-    <div class="container">
-        <div class="row">
-            <div class="universe-cover">
+<section class="universe-section universe-section-collection">
+    <div class="universe">
+        <div class="container">
+            <div class="row">
                 <div class="col-md-12">
-                    <div class="img-universe-cover">
-                        <img src="/static/img/universe-card-01.webp" alt="" srcset="">
+                    <div class="niverse-cover-item">
+                        <div class="universe-title">
+                            <h2 class="universe-h2 universe-h2-product">
+                                <a id="ctl00_cphMain_ctl00_SanPhamHot_mnCap" class="universe-a universe-a-title-list universe-a-title-list-collection" href="/vi/san-pham-hot" target="_self">Sản phẩm hot</a>
+                            </h2>
+                        </div>
+                        <div class="universe-cover universe-cover-product-collection">
+                            <a href="/templates/womens-fashion.html" target="_self">
+                                <img src="/static/img/universe-cover-01.jpg" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div><!--universe-cover-->
-            <div class="universe-card-grid">
-                <div class="col-sm-3">
-                    <div class="universe-card">
-                        <a href="#">
-                            <div class="image">
-                                <img src="/static/img/universe-card-01.webp" alt="" srcset="">
-                            </div>
-                            <div class="universe-card-text">
-                                ÁO ĐẸP
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="universe-card">
-                        <a href="#">
-                            <div class="image">
-                                <img src="/static/img/universe-card-01.webp" alt="" srcset="">
-                            </div>
-                            <div class="universe-card-text">
-                                ÁO ĐẸP
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="universe-card">
-                        <a href="#">
-                            <div class="image">
-                                <img src="/static/img/universe-card-01.webp" alt="" srcset="">
-                            </div>
-                            <div class="universe-card-text">
-                                ÁO ĐẸP
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="universe-card">
-                        <a href="#">
-                            <div class="image">
-                                <img src="/static/img/universe-card-01.webp" alt="" srcset="">
-                            </div>
-                            <div class="universe-card-text">
-                                ÁO ĐẸP
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div><!--universe-cover-->
-        </div><!--row-->
-
-            <!-- <div class="universe-grid universe-grid--with-cover"></ul>
-        </div>
-        <div class="row">
-            <div class="universe-card">
-                <a href="#">
-                    <div class="image">
-                        <img src="/static/img/universe-card-01.webp" alt="" srcset="">
-                    </div>
-                    <div class="universe-card-text">
-                        ÁO ĐẸP
-                    </div>
-                </a>
             </div>
-            <div class="universe-card">
-                <a href="#">
-                    <div class="image">
-                        <img src="/static/img/universe-card-01.webp" alt="" srcset="">
-                    </div>
-                    <div class="universe-card-text">
-                        ÁO ĐẸP
-                    </div>
-                </a>
+            <div class="row">
+                <div class="universe-title">
+                    <h2 class="universe-h2 universe-h2-product">
+                        <a class="universe-a universe-a-title-list universe-a-title-list-collection" href="/vi/san-pham-hot" target="_self">Bộ sưu tập</a>
+                    </h2>
+                </div>
             </div>
-            <li class="universe-card">
-                <a href="#">
-                    <div class="image">
-                        <img src="/static/img/universe-card-01.webp" alt="" srcset="">
-                    </div>
-                    <div class="universe-card-text">
-                        ÁO ĐẸP
-                    </div>
-                </a>
-            </li><li class="universe-card">
-                <a href="#">
-                    <div class="image">
-                        <img src="/static/img/universe-card-01.webp" alt="" srcset="">
-                    </div>
-                    <div class="universe-card-text">
-                        ÁO ĐẸP
-                    </div>
-                </a>
-            </li> -->
+            <div class="row">
+                <!-- universe-grid-item-1 -->
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="universe-grid-item universe-grid-item-list-product-group universe-item-collection">
+                        <div class="universe-figure universe-figure-product universe-figure-product-collection">
+                            <a href="/templates/womens-fashion.html" target="_self">
+                                <img class="img-fluid" src="/static/img/universe-card-D31052.jpg" alt="ĐẦM NHUNG CAO CẤP D31052">
+                            </a>
+                        </div>
+                        <div class="universe-des-group universe-des-group-product">
+                            <div class="universe-title universe-title-product universe-title-product-collection">
+                                <a class="universe-a universe-a-title-product" href="/templates/womens-fashion.html" target="_self" title="CHÂN VÁY XẾP LI Z27782">
+                                    <h3 class="universe-h3 universe-h3-product">ĐẦM NHUNG CAO CẤP D31052</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!-- universe-grid-item -->
+                </div>
+                <!-- universe-grid-item-2 -->
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="universe-grid-item universe-grid-item-list-product-group universe-item-collection">
+                        <div class="universe-figure universe-figure-product universe-figure-product-collection">
+                            <a href="/templates/womens-fashion.html" target="_self">
+                                <img class="img-fluid" src="/static/img/universe-card-D27022.jpg" alt="ĐẦM NHUNG CAO CẤP D31052">
+                            </a>
+                        </div>
+                        <div class="universe-des-group universe-des-group-product">
+                            <div class="universe-title universe-title-product universe-title-product-collection">
+                                <a class="universe-a universe-a-title-product" href="/templates/womens-fashion.html" target="_self" title="CHÂN VÁY XẾP LI Z27782">
+                                    <h3 class="universe-h3 universe-h3-product">ĐẦM NHUNG CAO CẤP D31052</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!-- universe-grid-item -->
+                </div>
+                <!-- universe-grid-item-3 -->
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="universe-grid-item universe-grid-item-list-product-group universe-item-collection">
+                        <div class="universe-figure universe-figure-product universe-figure-product-collection">
+                            <a href="/templates/womens-fashion.html" target="_self">
+                                <img class="img-fluid" src="/static/img/universe-card-D28189.jpg" alt="ĐẦM NHUNG CAO CẤP D31052">
+                            </a>
+                        </div>
+                        <div class="universe-des-group universe-des-group-product">
+                            <div class="universe-title universe-title-product universe-title-product-collection">
+                                <a class="universe-a universe-a-title-product" href="/templates/womens-fashion.html" target="_self" title="CHÂN VÁY XẾP LI Z27782">
+                                    <h3 class="universe-h3 universe-h3-product">ĐẦM NHUNG CAO CẤP D31052</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!-- universe-grid-item -->
+                </div>
+                <!-- universe-grid-item-4 -->
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="universe-grid-item universe-grid-item-list-product-group universe-item-collection">
+                        <div class="universe-figure universe-figure-product universe-figure-product-collection">
+                            <a href="/templates/womens-fashion.html" target="_self">
+                                <img class="img-fluid" src="/static/img/universe-card-AK28139.jpg" alt="ĐẦM NHUNG CAO CẤP D31052">
+                            </a>
+                        </div>
+                        <div class="universe-des-group universe-des-group-product">
+                            <div class="universe-title universe-title-product universe-title-product-collection">
+                                <a class="universe-a universe-a-title-product" href="/templates/womens-fashion.html" target="_self" title="CHÂN VÁY XẾP LI Z27782">
+                                    <h3 class="universe-h3 universe-h3-product">ĐẦM NHUNG CAO CẤP D31052</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!-- universe-grid-item -->
+                </div>
+            </div><!--row-->
+        </div><!--container-->
+    </div><!-- universe -->
+</section>
 
-    </div><!--container-->
-</div><!-- universe -->
 
 </body>
+<footer>
+    <div class="footer-blocks">
+        <div class="container-full">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <p>
+                            Trụ sở 1: 18/8 Khu phố Tân Hòa, Phường Đông Hòa, Thành phố Dĩ An, Tỉnh Bình Dương.<br>
+                            Trụ sở 2: Đông Hòa, Thành phố Dĩ An, Tỉnh Bình Dương.<br>
+                            * Đơn Hàng Online: 0397.139.379<br>
+                            * Dịch vụ Cửa hàng/ Chất lượng sản phẩm: 07888.880.79<br>
+                            * Email: foxvcskh@gmail.com
+                        </p>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="universe-footer-group">
+                            <div class="universe-footer-title">
+                                <h5>DANH MỤC SẢN PHẨM</h5>
+                            </div>
+                            <ul class="universe-ul">
+                                <li>
+                                    <a href="">Đồ nữ</a>
+                                </li>
+                                <li>
+                                    <a href="">Đồ trẻ em</a>
+                                </li>
+                                <li>
+                                    <a href="">Bộ sưu tập</a>
+                                </li>
+                                <li>
+                                    <a href="">Đồ sale</a>
+                                </li>
+                                <li>
+                                    <a href="">Phụ kiện</a>
+                                </li>
+                            </ul>
+                        </div><!-- universe-footer-group -->
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="universe-footer-group">
+                            <div class="universe-footer-title">
+                                <h5>DANH MỤC SẢN PHẨM</h5>
+                            </div>
+                            <ul class="universe-ul">
+                                <li>
+                                    <a href="https://goo.gl/maps/Js9mGp4PkY8UpmjJ7">Foxv Thành phố Dĩ An</a>
+                                </li>
+                                <li>
+                                    <a href="https://goo.gl/maps/Js9mGp4PkY8UpmjJ7">Foxv Thành phố Bình Dương</a>
+                                </li>
+                                <li>
+                                    <a href="">Foxv Thành phố Phía Đông</a>
+                                </li>
+                                <li>
+                                    <a href="">Foxv Thành phố Đức Trọng</a>
+                                </li>
+                            </ul>
+                        </div><!-- universe-footer-group -->
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bot">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="footer-bot-contract">
+                                <span>Phone: 0397.139.379</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="footer-bot-contract">
+                                <span>Email: foxvcskh@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="footer-bot-contract">
+                                <span>P© 2019 Bản quyền thuộc foxs.com.vn</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </html>

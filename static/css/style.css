@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
 }
+
+
 .header-top {
     background: black;
     height: 35px;
@@ -194,21 +196,156 @@ span#btn-slide {
         transform: translateX(0%);
     }
 }
-
 /*////////////////////////////////////////////////
-//UNIVERSE////////////////////////////////////
+//UNIVERSE-TABPANE-PRODUCT////////////////////////
 ////////////////////////////////////////////////*/
-.content-grid {
-    padding: 20px;
-    overflow: hidden;
+/* ##Price */
+.universe-product-item {
+    position: relative;
+
 }
-.universe-card-grid .universe-card {
-    overflow: hidden;
+.universe-product-item-price {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
 }
 
+.universe-span-price {
+    font-size: 15pt;
+    background-color: black;
+}
+/* !Price */
+.universe-span-price-new {
+    color: white;
+    font-weight: bold;
+}
+
+.universe-span-price-old {
+    color: white;
+    text-decoration: line-through;
+}
+.universe-price-bg {
+    background-color: black;
+}
+
+.universe-tab-pane-block {
+    margin-bottom: 40px;
+}
+
+/* ver2 */
+.universe-tab-pane-product img {
+    width: 100%;
+}
+
+.universe-product-item {
+    padding: 10px;
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    background-color: #ddd;
+}
+.nav-tabs .nav-link.active {
+    color: white;
+    background-color: #212529;
+    border-color:#212529;
+}
+/*////////////////////////////////////////////////
+//UNIVERSE////////////////////////////////////////
+////////////////////////////////////////////////*/
+.niverse-cover-item {
+    margin-bottom:30px;
+}
+.universe-title {
+    margin: 10px;
+}
+.universe-figure img {
+    width: 100%;
+    height: auto;
+}
+
+.universe-a, .universe-a:hover {/* Global */
+    color: black;
+    text-decoration: none;
+}
+
+.universe-cover img {
+    width: 100%;
+    height: auto;
+}
+
+.universe-figure img {
+    width: 100%;
+    height: auto;
+}
+
+.universe-h3 {
+    font-size: 13pt;
+}
+
+.universe-h3-product {
+    font-size: 13pt;
+    text-align: center;
+}
+@media (min-width: 321px) {
+    .universe-grid-item{
+        margin: 0px 50px 0px 50px;
+    }
+}
+
+@media (min-width: 768px) {
+    .universe-grid-item{
+        margin: 0px;
+    }
+}
+/*////////////////////////////////////////////////
+//FOOTER//////////////////////////////////////////
+////////////////////////////////////////////////*/
+
+.universe-ul a, .universe-ul a:hover, .footer-top p, .universe-footer-title {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bot-contract {
+    color: black;
+}
+
+.footer-top{
+    background-color: #212529;
+    padding: 20px 60px 10px 60px;
+}
+.footer-bot{
+    background-color: #ddd;
+    padding: 10px 60px 10px 60px;
+}
+
+@media (min-width: 321px) {
+    section {
+        margin-top: 20px;
+    }
+    footer {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    section {
+        margin: 20px 0px 20px 0px;
+    }   
+    footer {
+        margin-top: 50px;
+    }
+}
 /*////////////////////////////////////////////////
 //RESPONTIVE//////////////////////////////////////
 ////////////////////////////////////////////////*/
+.container-full {
+    margin: 0px;
+    padding: 0px;
+}
 
 @media (min-width: 576px) {
     .container-sm, .container {
@@ -235,8 +372,50 @@ span#btn-slide {
       max-width: 1320px;
     }
   }
-  @media (min-width: 1600px) {
+@media (min-width: 1600px) {
     .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-      max-width: 1470px;
+        max-width: 1470px;
     }
-  }
+}
+/*////////////////////////////////////////////////
+//RESPONTIVE//////////////////////////////////////
+////////////////////////////////////////////////*/
+@media (min-width: 321px) {
+    .universe-grid-item{
+        margin: 0px 50px 0px 50px;
+    }
+    section {
+        
+        margin-top: 20px;
+    }
+    footer {
+        margin-top: 20px;
+    }
+}
+@media (min-width: 576px) {
+
+}
+@media (min-width: 768px) {
+    .universe-grid-item{
+        margin: 0px;
+    }
+    section {
+        margin-top: 20px;    
+    }   
+footer {
+    margin-top: 50px;
+}
+}
+
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+
+}
+@media (min-width: 1400px) {
+
+}
+@media (min-width: 1600px) {
+
+}
