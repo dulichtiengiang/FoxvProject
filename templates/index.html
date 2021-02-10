@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foxv | Mua Online Quần Áo Giá Rẻ</title>
     <!-- BOOTSTRAP -->
@@ -66,7 +66,7 @@
                             <ul class="navbar-nav m-auto">
                                 <li class="nav-item nav-btn">
                                     <!-- active -->
-                                    <a id="nav-menu-btn-home" class="nav-link" href="index.html" style="font-weight: bold;">TRANG CHỦ</a>
+                                    <a id="nav-menu-btn-home" class="nav-link" href="/" style="font-weight: bold;">TRANG CHỦ</a>
                                     <!-- <span class="sr-only">(current)</span> -->
                                 </li>
                                 <li class="nav-item nav-btn dropdown menu-area">
@@ -155,9 +155,9 @@
                                     <!-- <span class="sr-only">(current)</span> -->
                                 </li>
                             </ul>
-                            <form class="form-inline my-2 my-lg-0">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+                            <form action = '/search' method= "POST" class="form-inline my-2 my-lg-0">
+                                <input name = "search_input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" >Search</button>
                             </form>
                         </div>
                     </nav>
@@ -250,19 +250,19 @@
                                 <div class="col-sm-6 col-md-6 col-lg-3">
                                     <div class="universe-product-item">
                                         <div class="universe-product-image universe-product-new-image">
-                                            <a href="/templates/womens-fashion/{{product-id}}.html" target="_self">
+                                            <!--<a href="/templates/womens-fashion/login.html" target="_self">-->
                                                 <img class="img-fluid" src="/static/img/universe-product-295x295-01.jpg" alt="ĐẦM NHUNG CAO CẤP D31052">
                                             </a>
                                         </div>
                                         <div class="universe-product-des">
                                             <div class="universe-name universe-product-new-name">
-                                                <span class="universe-span-product universe-span-product-new-name">{{product-new-name-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-name">{{product_new_name_01}}</span>
                                             </div>
                                             <div class="universe-price-new universe-product-new-price-new">
-                                                <span class="universe-span-product universe-span-product-new-price-new">Giá: {{product-new-price-new-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-price-new">Giá:{{product_price_new_01}}</span>
                                             </div>
                                             <div class="universe-price-old universe-product-new-price-old">
-                                                <span class="universe-span-product universe-span-product-new-price-old">{{product-new-price-old-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-price-old">{{product_new_price_old_01}}</span>
                                             </div>
                                         </div>
                                         <!-- <img src="/static/img/universe-product-295x295-01.jpg" alt=""> -->
@@ -272,19 +272,19 @@
                                 <div class="col-sm-6 col-md-6 col-lg-3">
                                     <div class="universe-product-item">
                                         <div class="universe-product-image universe-product-new-image">
-                                            <a href="/templates/womens-fashion/{{product-id}}.html" target="_self">
+                                            <!--<a href="/templates/womens-fashion/login.html" target="_self">-->
                                                 <img class="img-fluid" src="/static/img/universe-product-295x295-01.jpg" alt="ĐẦM NHUNG CAO CẤP D31052">
                                             </a>
                                         </div>
                                         <div class="universe-product-des">
                                             <div class="universe-name universe-product-new-name">
-                                                <span class="universe-span-product universe-span-product-new-name">{{product-new-name-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-name">{{product_new_name_02}}</span>
                                             </div>
                                             <div class="universe-price-new universe-product-new-price-new">
-                                                <span class="universe-span-product universe-span-product-new-price-new">Giá: {{product-new-price-new-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-price-new">Giá: {{product_price_new_02}}</span>
                                             </div>
                                             <div class="universe-price-old universe-product-new-price-old">
-                                                <span class="universe-span-product universe-span-product-new-price-old">{{product-new-price-old-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-price-old">{{product_new_price_old_02}}</span>
                                             </div>
                                         </div>
                                         <!-- <img src="/static/img/universe-product-295x295-01.jpg" alt=""> -->
@@ -294,19 +294,19 @@
                                 <div class="col-sm-6 col-md-6 col-lg-3">
                                     <div class="universe-product-item">
                                         <div class="universe-product-image universe-product-new-image">
-                                            <a href="/templates/womens-fashion/{{product-id}}.html" target="_self">
+                                            <!--<a href="/templates/womens-fashion/.html" target="_self">-->
                                                 <img class="img-fluid" src="/static/img/universe-product-295x295-01.jpg" alt="ĐẦM NHUNG CAO CẤP D31052">
                                             </a>
                                         </div>
                                         <div class="universe-product-des">
                                             <div class="universe-name universe-product-new-name">
-                                                <span class="universe-span-product universe-span-product-new-name">{{product-new-name-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-name">{{product_new_name_03}}</span>
                                             </div>
                                             <div class="universe-price-new universe-product-new-price-new">
-                                                <span class="universe-span-product universe-span-product-new-price-new">Giá: {{product-new-price-new-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-price-new">Giá: {{product_price_new_03}}</span>
                                             </div>
                                             <div class="universe-price-old universe-product-new-price-old">
-                                                <span class="universe-span-product universe-span-product-new-price-old">{{product-new-price-old-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-price-old">{{product_new_price_old_03}}</span>
                                             </div>
                                         </div>
                                         <!-- <img src="/static/img/universe-product-295x295-01.jpg" alt=""> -->
@@ -316,19 +316,19 @@
                                 <div class="col-sm-6 col-md-6 col-lg-3">
                                     <div class="universe-product-item">
                                         <div class="universe-product-image universe-product-new-image">
-                                            <a href="/templates/womens-fashion/{{product-id}}.html" target="_self">
+                                            <!--<a href="/templates/womens-fashion/login.html" target="_self">-->
                                                 <img class="img-fluid" src="/static/img/universe-product-295x295-01.jpg" alt="ĐẦM NHUNG CAO CẤP D31052">
                                             </a>
                                         </div>
                                         <div class="universe-product-des">
                                             <div class="universe-name universe-product-new-name">
-                                                <span class="universe-span-product universe-span-product-new-name">{{product-new-name-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-name">{{product_new_name_04}}</span>
                                             </div>
                                             <div class="universe-price-new universe-product-new-price-new">
-                                                <span class="universe-span-product universe-span-product-new-price-new">Giá: {{product-new-price-new-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-price-new">Giá: {{product_price_new_04}}</span>
                                             </div>
                                             <div class="universe-price-old universe-product-new-price-old">
-                                                <span class="universe-span-product universe-span-product-new-price-old">{{product-new-price-old-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-price-old">{{product_new_price_old_04}}</span>
                                             </div>
                                         </div>
                                         <!-- <img src="/static/img/universe-product-295x295-01.jpg" alt=""> -->
@@ -338,19 +338,19 @@
                                 <div class="col-sm-6 col-md-6 col-lg-3">
                                     <div class="universe-product-item">
                                         <div class="universe-product-image universe-product-new-image">
-                                            <a href="/templates/womens-fashion/{{product-id}}.html" target="_self">
+                                            <!--<a href="/templates/womens-fashion/login.html" target="_self">-->
                                                 <img class="img-fluid" src="/static/img/universe-product-295x295-01.jpg" alt="ĐẦM NHUNG CAO CẤP D31052">
                                             </a>
                                         </div>
                                         <div class="universe-product-des">
                                             <div class="universe-name universe-product-new-name">
-                                                <span class="universe-span-product universe-span-product-new-name">{{product-new-name-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-name">{{product_new_name_05}}</span>
                                             </div>
                                             <div class="universe-price-new universe-product-new-price-new">
-                                                <span class="universe-span-product universe-span-product-new-price-new">Giá: {{product-new-price-new-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-price-new">Giá: {{product_price_new_05}}</span>
                                             </div>
                                             <div class="universe-price-old universe-product-new-price-old">
-                                                <span class="universe-span-product universe-span-product-new-price-old">{{product-new-price-old-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-price-old">{{product_new_price_old_05}}</span>
                                             </div>
                                         </div>
                                         <!-- <img src="/static/img/universe-product-295x295-01.jpg" alt=""> -->
@@ -360,19 +360,19 @@
                                 <div class="col-sm-6 col-md-6 col-lg-3">
                                     <div class="universe-product-item">
                                         <div class="universe-product-image universe-product-new-image">
-                                            <a href="/templates/womens-fashion/{{product-id}}.html" target="_self">
+                                            <!--<a href="/templates/womens-fashion/.html" target="_self">-->
                                                 <img class="img-fluid" src="/static/img/universe-product-295x295-01.jpg" alt="ĐẦM NHUNG CAO CẤP D31052">
                                             </a>
                                         </div>
                                         <div class="universe-product-des">
                                             <div class="universe-name universe-product-new-name">
-                                                <span class="universe-span-product universe-span-product-new-name">{{product-new-name-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-name">{{product_new_name_06}}</span>
                                             </div>
                                             <div class="universe-price-new universe-product-new-price-new">
-                                                <span class="universe-span-product universe-span-product-new-price-new">Giá: {{product-new-price-new-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-price-new">Giá: {{product_price_new_06}}</span>
                                             </div>
                                             <div class="universe-price-old universe-product-new-price-old">
-                                                <span class="universe-span-product universe-span-product-new-price-old">{{product-new-price-old-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-price-old">{{product_new_price_old_06}}</span>
                                             </div>
                                         </div>
                                         <!-- <img src="/static/img/universe-product-295x295-01.jpg" alt=""> -->
@@ -382,19 +382,19 @@
                                 <div class="col-sm-6 col-md-6 col-lg-3">
                                     <div class="universe-product-item">
                                         <div class="universe-product-image universe-product-new-image">
-                                            <a href="/templates/womens-fashion/{{product-id}}.html" target="_self">
+                                            <!--<a href="/templates/womens-fashion/.html" target="_self">-->
                                                 <img class="img-fluid" src="/static/img/universe-product-295x295-01.jpg" alt="ĐẦM NHUNG CAO CẤP D31052">
                                             </a>
                                         </div>
                                         <div class="universe-product-des">
                                             <div class="universe-name universe-product-new-name">
-                                                <span class="universe-span-product universe-span-product-new-name">{{product-new-name-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-name">{{product_new_name_07}}</span>
                                             </div>
                                             <div class="universe-price-new universe-product-new-price-new">
-                                                <span class="universe-span-product universe-span-product-new-price-new">Giá: {{product-new-price-new-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-price-new">Giá: {{product_price_new_07}}</span>
                                             </div>
                                             <div class="universe-price-old universe-product-new-price-old">
-                                                <span class="universe-span-product universe-span-product-new-price-old">{{product-new-price-old-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-price-old">{{product_new_price_old_07}}</span>
                                             </div>
                                         </div>
                                         <!-- <img src="/static/img/universe-product-295x295-01.jpg" alt=""> -->
@@ -404,19 +404,19 @@
                                 <div class="col-sm-6 col-md-6 col-lg-3">
                                     <div class="universe-product-item">
                                         <div class="universe-product-image universe-product-new-image">
-                                            <a href="/templates/womens-fashion/{{product-id}}.html" target="_self">
+                                            <!--<a href="/templates/womens-fashion/.html" target="_self">-->
                                                 <img class="img-fluid" src="/static/img/universe-product-295x295-01.jpg" alt="ĐẦM NHUNG CAO CẤP D31052">
                                             </a>
                                         </div>
                                         <div class="universe-product-des">
                                             <div class="universe-name universe-product-new-name">
-                                                <span class="universe-span-product universe-span-product-new-name">{{product-new-name-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-name">{{product_new_name_08}}</span>
                                             </div>
                                             <div class="universe-price-new universe-product-new-price-new">
-                                                <span class="universe-span-product universe-span-product-new-price-new">Giá: {{product-new-price-new-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-price-new">Giá: {{product_price_new_08}}</span>
                                             </div>
                                             <div class="universe-price-old universe-product-new-price-old">
-                                                <span class="universe-span-product universe-span-product-new-price-old">{{product-new-price-old-01}}</span>
+                                                <span class="universe-span-product universe-span-product-new-price-old">{{product_new_price_old_08}}</span>
                                             </div>
                                         </div>
                                         <!-- <img src="/static/img/universe-product-295x295-01.jpg" alt=""> -->
@@ -479,8 +479,8 @@
                         </div>
                         <div class="universe-des-group universe-des-group-product">
                             <div class="universe-title universe-title-product universe-title-product-collection">
-                                <a class="universe-a universe-a-title-product" href="/templates/womens-fashion.html" target="_self" title="{{product-collection-name-01}}">
-                                    <h3 class="universe-h3 universe-h3-product">{{product-collection-name-01}}</h3>
+                                <!--<a class="universe-a universe-a-title-product" href="/templates/womens-fashion.html" target="_self" title="">-->
+                                    <h3 class="universe-h3 universe-h3-product">{product-collection-name-01}</h3>
                                 </a>
                             </div>
                         </div>
@@ -496,8 +496,8 @@
                         </div>
                         <div class="universe-des-group universe-des-group-product">
                             <div class="universe-title universe-title-product universe-title-product-collection">
-                                <a class="universe-a universe-a-title-product" href="/templates/womens-fashion.html" target="_self" title="{{product-collection-name-02}}">
-                                    <h3 class="universe-h3 universe-h3-product">{{product-collection-name-02}}</h3>
+                                <!--<a class="universe-a universe-a-title-product" href="/templates/womens-fashion.html" target="_self" title="">-->
+                                    <h3 class="universe-h3 universe-h3-product">{product-collection-name-02}</h3>
                                 </a>
                             </div>
                         </div>
@@ -513,8 +513,8 @@
                         </div>
                         <div class="universe-des-group universe-des-group-product">
                             <div class="universe-title universe-title-product universe-title-product-collection">
-                                <a class="universe-a universe-a-title-product" href="/templates/womens-fashion.html" target="_self" title="{{product-collection-name-03}}">
-                                    <h3 class="universe-h3 universe-h3-product">{{product-collection-name-03}}</h3>
+                                <!--<a class="universe-a universe-a-title-product" href="/templates/womens-fashion.html" target="_self" title="">-->
+                                    <h3 class="universe-h3 universe-h3-product">{product-collection-name-03}</h3>
                                 </a>
                             </div>
                         </div>
@@ -530,8 +530,8 @@
                         </div>
                         <div class="universe-des-group universe-des-group-product">
                             <div class="universe-title universe-title-product universe-title-product-collection">
-                                <a class="universe-a universe-a-title-product" href="/templates/womens-fashion.html" target="_self" title="{{product-collection-name-04}}">
-                                    <h3 class="universe-h3 universe-h3-product">{{product-collection-name-04}}</h3>
+                                <!--<a class="universe-a universe-a-title-product" href="/templates/womens-fashion.html" target="_self" title="">-->
+                                    <h3 class="universe-h3 universe-h3-product">{product-collection-name-04}</h3>
                                 </a>
                             </div>
                         </div>
