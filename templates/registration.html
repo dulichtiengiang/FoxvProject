@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="/static/css/bootstrap413.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+
+    <script src="/static/font-awesome/all.js"></script>
+    <script src="/static/js/jquery-3.5.1.min.js"></script> <!--jquery-3.5.1.min.js -> full standard -->
+    <script src="/static/js/bootstrap413.js"></script>
+    <script src="/static/js/VICscript.js"></script>
+</head>
+<body>
+<div class="registration-section">
+    <div class="bg-gradient-primary">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 col-xl-10 col-md-9">
+                    <div class="card border-0 my-5 shadow-lg">
+                        <div class="card-body p-0">
+                            <div class="row">
+                                <div class="col-lg-6 o-hidden d-none d-lg-block foxv-bg-registration">
+                                </div>
+                                <div class="col-lg-6 p-5">
+                                    <div class="foxv-form-outer">
+                                        <!-- Form Outer -->
+                                        <form class="user" action="#">
+                                            <!-- FORM-1 -->
+                                            <div class="foxv-form foxv-form-active">
+                                                <div class="foxv-form-title form-group">
+                                                    <b>THÔNG TIN TÀI KHOẢN (1/3)</b>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">Email</label>
+                                                    <input type="email" class="form-control form-control-user" id="email" name ="email" required="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">Xác nhận lại Email</label>
+                                                    <input type="email" class="form-control form-control-user" id="emailconfirmation" name ="emailconfirmation" required="">
+                                                </div>
+                                                <div class="foxv-form-group-btn">
+                                                    <button type="button" name="btn-next" class="foxv-button btnNext" id="foxv-btn-next-f1">Kế tiếp</button>
+                                                </div>
+                                            </div>
+                                            <!-- FORM-2 -->
+                                            <div class="foxv-form">
+                                                <div class="foxv-form-title form-group">
+                                                    <b>THÔNG TIN TÀI KHOẢN (2/3)</b>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="password">Mật khẩu</label>
+                                                    <input type="password" class="form-control form-control-user" id="password" name ="password" required="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="password">Xác nhận Mật khẩu</label>
+                                                    <input type="password" class="form-control form-control-user" id="passwordconfirmation" name ="password" required="">
+                                                </div>
+                                                <div class="foxv-form-title form-group">
+                                                    <b>THÔNG TIN CÁ NHÂN</b>
+                                                </div>
+                                                <!-- Họ tên, Giới tính, Ngày sinh,  -->
+                                                <div class="form-group">
+                                                    <label for="first">Họ </label>
+                                                    <input type="text" class="form-control form-control-user" id="firstname" name ="firstname" required="">
+                                                    <label for="first">Tên </label>
+                                                    <input type="text" class="form-control form-control-user" id="firstname" name ="firstname" required="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="gender">Giới tính</label>
+    
+                                                </div>
+                                                <div class="foxv-form-group-btn">
+                                                        <button type="button" name="btn-next" class="foxv-button" id="foxv-btn-prev-f2">Trở lại</button>
+                                                        <button type="button" name="btn-next" class="foxv-button" id="foxv-btn-next-f2">Kế tiếp</button>
+                                                </div>
+                                                
+                                            </div>
+                                            <!-- FORM-3 -->
+                                            <div class="foxv-form">
+                                                <div class="foxv-form-title form-group">
+                                                    <b>KÍCH HOẠT TÀI KHOẢN (3/3)</b>
+                                                </div>
+                                                <div class="content-email">Xin vui lòng kích hoạt tài khoản. Bạn đã nhận mã kích hoạt tại email: {{emailverify}} để kích hoạt tài khoản.</div>
+                                                <label for="activationcode">Activation Code:</label>
+                                                <input type="text" class="form-control form-control-user" id="activationcode" name ="activationcode" required="">
+                                                <div class="foxv-form-group-btn">
+                                                    <button type="submit" name="btn-submit" class="foxv-button" id="foxv-btn-prev-f4">Trở lại</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
