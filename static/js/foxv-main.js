@@ -1,6 +1,25 @@
 
 $(document).ready(function() {
+/////////////////////////////////////////////
+////////// HEADER ///////////////////////////
+/////////////////////////////////////////////
 
+const btnAccount = document.querySelector('.foxv-header-tools__tools-item.-account');
+const btnClose = document.querySelector('.foxv-modal__close');
+const sidePanel = document.querySelector('.foxv-modal__sidepanel');
+const backDrop = document.querySelector('.foxv-modal__backdrop');
+const body = document.querySelector('body');
+
+btnAccount.addEventListener('click', function() {
+    backDrop.classList.add('active');
+    sidePanel.classList.add('active');
+    body.classList.add('o-hidden');
+});
+btnClose.addEventListener('click', function(){
+    sidePanel.classList.remove('active');
+    backDrop.classList.remove('active');
+    body.classList.remove('o-hidden');
+});
 /////////////////////////////////////////////
 ////////// TAB SHOW /////////////////////////
 /////////////////////////////////////////////
@@ -9,49 +28,43 @@ $(document).ready(function() {
     });
     $('.nav-tabs a').on('shown.bs.tab', function(event){
         var x = $(event.target).text();         // active tab
-        console.log(x);
         var y = $(event.relatedTarget).text();  // previous tab
-        console.log(y);
         $(".act span").text(x);
         $(".prev span").text(y);
     });
 
-//Slide: Width x Height
 // for Moblie
 // $('footer div').css({height': variable + 'px'}
     var slide_Width = $('.slider-container').width();
     var slide_Height = slide_Width/2.35;
     $('.slider-container').css({'height': slide_Height});
-    console.log(slide_Width);
-    console.log(slide_Height);
 
-//Slide: Control
     var autoLoad = setInterval(function() {
         dot_Active = dot_Current + 1;
         controlDot();
         controlSlide();
     },3000);
-    var dot_Current = $('.slick-dots .dot.active').index() + 1;
+    var dot_Current = $('.foxv-slick-dots .dot.active').index() + 1;
     var dot_Active = 1;
-    //var dot_Current = $('.slick-dots .dot:nth-child('+()+')');
+    //var dot_Current = $('.foxv-slick-dots .dot:nth-child('+()+')');
     var slide_Current;
     var slide_Active;
     var modeAction;
     function controlDot() {
         if (dot_Active > dot_Current) {
-            $('.slick-dots .dot').removeClass('active');
+            $('.foxv-slick-dots .dot').removeClass('active');
             if (dot_Active < 5) {
-                $('.slick-dots .dot:nth-child('+(dot_Active)+')').addClass('active');
+                $('.foxv-slick-dots .dot:nth-child('+(dot_Active)+')').addClass('active');
             } else {
-                $('.slick-dots .dot:first-child').addClass('active');
+                $('.foxv-slick-dots .dot:first-child').addClass('active');
             }
         } else if (dot_Active < dot_Current) { //dot_Active < dot_Current
-            $('.slick-dots .dot').removeClass('active');
+            $('.foxv-slick-dots .dot').removeClass('active');
             if (dot_Active > 0) {
-                $('.slick-dots .dot:nth-child('+(dot_Active)+')').addClass('active');
+                $('.foxv-slick-dots .dot:nth-child('+(dot_Active)+')').addClass('active');
                 //dot_Current = dot_Active;
             } else {
-                $('.slick-dots .dot:last-child').addClass('active');
+                $('.foxv-slick-dots .dot:last-child').addClass('active');
             }
         }
     }
@@ -96,8 +109,6 @@ $(document).ready(function() {
                 dot_Current = 4;
             }
         }
-        console.log("dot.Current: ", dot_Current);
-        console.log("dot.Active: ", dot_Active);
     }
     // handling Button
     $('#btn-next').on('click', function(event) {
@@ -113,7 +124,7 @@ $(document).ready(function() {
         controlDot();
         controlSlide();
     });
-    $('.slick-dots li').on('click', function() {
+    $('.foxv-slick-dots li').on('click', function() {
         clearInterval(autoLoad);
         dot_Active=$(this).index()+1;
         controlDot();
