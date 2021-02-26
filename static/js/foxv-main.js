@@ -122,7 +122,6 @@ $(document).ready(function() {
 
     // handling Dot
     // handling Slide
-
 });
 
 
