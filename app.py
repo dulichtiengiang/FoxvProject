@@ -1,28 +1,75 @@
-from flask import Flask , redirect , url_for , render_template , jsonify , request , Request , Response
+from flask import Flask , flash , redirect , url_for , render_template , jsonify , request , Request , Response
 import json
 import re
 import os
 import sys
 from IPython.display import HTML
+import pymysql
+import pandas as pd
+from flask_mail import Mail , Message
+from flask_sqlalchemy import SQLAlchemy
 from flaskext.mysql import MySQL
+import random
+from flask_login import UserMixin , current_user , logout_user , login_user , LoginManager , login_required
 app = Flask(__name__ , static_folder = 'static' , template_folder = 'templates')
 
+####### MYSQL CONFIG ###############################
+app.config['SECRET_KEY'] = '123giadinh'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 app.config['MYSQL_DATABASE_PORT'] = 3306
 app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = '123giadinh'
 app.config['MYSQL_DATABASE_DB'] = 'control'
 app.config['MYSQL_DATABASE_CHARSET'] = 'utf8mb4'
-
 mysql = MySQL()
-mysql.init_app(app) 
+mysql.init_app(app)
+
+########### SQLALCHEMY CONFIG ################################
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123giadinh@localhost/control'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+class User(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    email = db.Column(db.String(50) , nullable = False)
+    password = db.Column(db.String(50) , nullable = False)
+    last_name = db.Column(db.String(50) , nullable = False)
+    first_name = db.Column(db.String(50) , nullable = False)
+    gender = db.Column(db.String(50) , nullable = False)
+    def __init__(self, email , password , last_name , first_name , gender):
+        self.email = email
+        self.password = password
+        self.last_name = last_name
+        self.first_name = first_name
+        self.gender = gender
+
+####### EMAIL CONFIG ####################
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'ngatran12256@gmail.com'
+app.config['MAIL_PASSWORD'] = '123giadinh'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_SUPPRESS_SEND'] = False
+mail = Mail(app)
+code = random.randint(000000,999999)
+
 
 @app.route('/' , methods = ['GET', 'POST'])
-
-
 def Home():
-    cursor = mysql.get_db().cursor()
+    if request.method == "POST":
+        email = request.form['foxv_email']
+        password = request.form['foxv_password']
+        
+        user = User.query.filter_by(email = email , password = password).first()
+        if user is None:
+            flash("No User Found")
+        else:
+            flash ("U Login")
     
+ 
+    
+    cursor = mysql.get_db().cursor()
     ######### PRODUCT 1 #############
     product = cursor.execute("SELECT * FROM quanao")
     product = cursor.fetchall()
@@ -47,7 +94,7 @@ def Home():
     
     ########## PRODUCT 5 #################
     product5= product[4][1]
-    price5 = product[4][2].git/config
+    price5 = product[4][2]
     price_old5 = product[4][3]
     
     ######## PRODUCT 6 ###############
@@ -89,18 +136,77 @@ def Home():
                            product_new_price_old_08 = price_old8,
                            product_price_new_08 = price8,
                            product_new_name_08 = product8)
-    
-@app.route('/search' , methods = ['GET', 'POST'])
-def search_function():
+
+
+
+
+@app.route('/Register' , methods = ['GET' , 'POST'])
+def register():    
     if request.method == 'POST':
-        search_input = request.form['search_input']
-        cursor = mysql.get_db().cursor()
-        products = cursor.execute("SELECT * FROM quanao WHERE name = 'product-name-01'")
-        if search_input == products:
-            return "Right"
-    return redirect(url_for('Home'))
+        email = request.form['email']
+        email_check = request.form['email_check']
+        password = request.form['password']
+        password_check = request.form['password_check']
+        last_name = request.form['last_name']
+        first_name = request.form['first_name']
+        gender = request.form['gender']
+        dub_email = User.query.filter_by(email = email).first()
+        
+       ######## Check Match ###########
+        if email != email_check:
+           flash ("Email Not Match")
+        if password != password_check:
+            flash ("Password Not Match")
+           
+        ######### CHeck Email Exist in Data ########
+        if email == dub_email:
+            flash ("Email already chosen")
+        else:
+            ##### ADD User #########
+            
+            user = User(email , password , last_name , first_name , gender)
+            db.session.add(user)
+            db.session.commit()    
+            ##### Sent Email ##333333
+            
+            msg = Message('Email Activation' , sender="ngatran12256@gmail.com" , recipients=[email])
+            msg.body = str(code)
+            mail.send(msg)
+            
+    return render_template('registration.html')
+        
+####### Email Confirm ########3
+@app.route('/email_confirm' , methods = ['GET' , 'POST'])    
+def email_confirm():
+    if request.method == 'POST':
+        email_vertify = request.form['email_activation']
+        if int(email_vertify) == code:
+            return redirect(url_for('Home'))
+    return render_template('email_confirmation.html')
+    
+ 
 
-
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+# @app.route('/search' , methods = ['GET', 'POST'])
+# def search_function():
+#     if request.method == 'POST':
+#         search_input = request.form['search_input']
+#         cursor = mysql.get_db().cursor()
+#         products = cursor.execute("SELECT * FROM quanao WHERE name = 'product-name-01'")
+#         if search_input == products:
+#             return "Right"
+#     return redirect(url_for('Home'))
+    
+    
 ##########################################
 if __name__ == '__main__':
     app.run(host='localhost', debug=True , port=0)

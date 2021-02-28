@@ -2,16 +2,214 @@
     margin: 0;
     padding: 0;
 }
+:root {
+    --main-color: #f8f9fa;
+    --border-color: #ced4da;
+    --main-color-active: #212529;
+}
+/* ui-std*/
+.foxv-form-field-btn {
+    display: flex;
+    justify-content: space-between;
+}
+.foxv-form-field {
+    margin-bottom: 2rem;
+    /* padding: 0 3rem 0 3rem; */
+}
+.foxv-form-divided {
+    border-bottom: 1px solid #ced4da;
+    margin-bottom: 2rem;
+}
 /*//////////////////////////////////////////////*/
-/*//UI FORM/////////////////////////////////////*/
+/*// ui - form /////////////////////////////////*/
 /*//////////////////////////////////////////////*/
-/* UI-Index */
-.foxv-nav-item {
-    font-size: 10pt;
-    font-weight: bold;
+/* ui-header */
+.foxv-header {
+    position: relative;
+    margin: 5px 15px 5px 15px;
+    color: black;
+    font-size: 1rem;
+}
+.foxv-header__container {
+    height: 30px;
+    border-bottom: 1.5px solid var(--main-color);
+}
+.foxv-header-tools {
+    display: flex;
+    justify-content: space-between;
+}
+.foxv-header-tools__social, .foxv-header-tools__services {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+.foxv-header-tools__tools-item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.foxv-header .col-sm-6 {
+    width: 50%;
+}
+.foxv-icon > img{
+    width: 20px;
+    height: 20px;
+}
+@media screen and (min-width: 768px) { 
+    .foxv-header {
+        font-size: 1rem;
+    }
+    .foxv-header__container {
+        height: 30px;
+        border-bottom: 2px solid var(--main-color);
+    }
+    .foxv-header-tools__tools-item {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+/* ui-login */
+.foxv-header-login-form h2 {
+    font-size: 1rem;
 }
 
-/* !UI-Index */
+.foxv-icon-button {
+    border: 1px solid #f8f9fa;
+}
+.foxv-icon-button:hover {
+    background-color: var(--main-color);
+}
+
+.foxv-modal__backdrop {
+    display: none;
+}
+
+.foxv-modal__backdrop.active {
+    display: block;
+}
+
+.foxv-modal__sidepanel {
+    display: none;
+    position: fixed;
+    overflow: hidden;
+    top: 0px;
+    right: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.foxv-modal__sidepanel.active {
+    display: block;
+}
+
+.foxv-modal__container {
+    padding: 3rem;
+}
+.foxv-backdrop {
+    position:fixed;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    z-index: 100;
+    opacity: .7;
+}
+
+/* Mobile */
+.foxv-modal__title {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #f8f9fa;
+    padding: 0px;
+    margin: 0;
+    color: inherit;
+    font-weight: bolder;
+}
+
+/* .foxv-modal__title {
+    letter-spacing: 0;
+    line-height: 1.75rem;
+    font-weight: 700;
+} */
+.foxv-modal__title > span {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    height: 60px;
+    padding-left: 3rem;
+}
+.foxv-modal__close {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    height: 60px;
+    width: 60px;
+}
+.foxv-modal__contents {
+    position: relative;
+}
+.foxv-list-label-s{
+    border: none;
+    background-color: none;
+}
+@media screen and (min-width: 768px) { 
+    /* For desktop  */
+    .foxv-modal__title > span {
+        font-size: 1.5rem;
+        height: 60px;
+    }
+
+    .foxv-modal__sidepanel {
+        width: 50vw;
+        overflow-x:hidden;
+        overflow-y:auto;
+    }
+
+    .foxv-modal__close {
+        height: 60px;
+        width: 60px;
+    }
+
+    .foxv-modal__contents {
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 992px) { 
+}
+
+@media screen and (min-width: 1200px) {
+    .foxv-modal__sidepanel {
+        width: 40vw;
+    }
+}
+/* UI-Navigation ##nav*/ 
+
+.foxv-nav-menu {
+    position: relative;
+}
+.foxv-nav-item {
+    font-size: 0.8rem;
+    padding: 0px 10px 0px 10px;
+}
+/* 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: burlywood;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+} */
+
+/* !UI-Slider ##slider */
 .foxv-button{
     font-size: inherit;
     color:white;
@@ -24,14 +222,35 @@
     margin: 10px 0px 10px 0px;
     cursor: pointer;
     /* animate and time for transition */
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .foxv-button:hover {
     background-color: #e1e1e1;
+    color: black;
+}
+.foxv-button-fluid {
+    font-size: inherit;
+    color:white;
+    background-color: #19110b;
+    box-sizing: border-box;
+    display:block;
+    width: 100%;
+    border: 0px;
+    letter-spacing: 2px;
+    padding: 10px 0px;
+    cursor: pointer;
+    /* animate and time for transition */
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.foxv-button-fluid:hover {
+    background-color:var(--main-color);
     color: black;
 }
 
@@ -55,12 +274,6 @@
     transition: margin-left 0.3s ease-in-out;
     padding: 5px;
 }
-
-.foxv-form-group-btn {
-    display: flex;
-    justify-content: space-between;
-}
-
 /*//////////////////////////////////////////////*/
 /*//BACKGROUP///////////////////////////////////*/
 /*//////////////////////////////////////////////*/
@@ -177,21 +390,6 @@
 }
 
 
-.header-top {
-    background: black;
-    height: 35px;
-    color: white;
-    margin-top: 5px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: burlywood;
-    width: 100%;
-    left: 0;
-    z-index: 1;
-}
 /*////////////////////////////////////////////////
 //MENU NAVIGATION/////////////////////////////////
 ////////////////////////////////////////////////*/
@@ -203,18 +401,16 @@
     position: static;
 }
 
-.mega-area {
+.foxv-mega-area {
     width: 100%;
     padding: 0px 20px 0px 20px;
 }
 
-.mega-area-content > img {
+.foxv-mega-area-content > img {
     width: 250px;
 }
 
-/*////////////////////////////////////////////////
-//SLIDE///////////////////////////////////////////
-////////////////////////////////////////////////*/
+/* Navigation - Slide */
 .cover-items-slider {
     margin-top: 22px;
 }
@@ -275,7 +471,7 @@ span#btn-slide {
     cursor: pointer;
 }
 
-.slick-dots {
+.foxv-slick-dots {
     position: absolute;
     z-index: 10;
     width: 100px;
@@ -286,18 +482,22 @@ span#btn-slide {
     justify-content: space-between;
 }
 
-.slick-dots .dot {
-    background: black;
+.foxv-slick-dots .dot {
+    background: var(--main-color);
     width: 20px;
     height: 20px;
-    opacity: 50%;
+    opacity: 30%;
     list-style: none;
     border-radius: 50%;
     cursor: pointer;
-    transform: 0.6s;
 }
 
-.slick-dots .dot.active {
+.foxv-slick-dots .dot:hover {
+    border: 1px solid var(--main-color-active);
+    opacity: 90% ;
+}
+
+.foxv-slick-dots .dot.active {
     opacity: 90%;
 }
 /*
@@ -312,10 +512,10 @@ span#btn-slide {
     animation: disappear-left 1s forwards; /* Tên hiệu ứng Chạy xong, giữ nguyên trạng thái*/
 }
 @-webkit-keyframes disappear-left{
-    from{
+    0% {
         transform: translateX(0%);
     }
-    to{
+    100% {
         transform: translateX(-100%);
     }
 }
@@ -325,10 +525,10 @@ span#btn-slide {
     animation: appear-left 1s forwards; /* Tên hiệu ứng Chạy xong, giữ nguyên trạng thái*/
 }
 @-webkit-keyframes appear-left{
-    from{
+    0% {
         transform: translateX(100%);
     }
-    to{
+    100% {
         transform: translateX(0%);
     }
 }
@@ -337,10 +537,10 @@ span#btn-slide {
     animation: disappear-right 1s forwards; /* Tên hiệu ứng Chạy xong, giữ nguyên trạng thái*/
 }
 @-webkit-keyframes disappear-right{
-    from{
+    0% {
         transform: translateX(0%);
     }
-    to{
+    100%{
         transform: translateX(100%);
     }
 }
@@ -350,60 +550,55 @@ span#btn-slide {
     animation: appear-right 1s forwards; /* Tên hiệu ứng Chạy xong, giữ nguyên trạng thái*/
 }
 @-webkit-keyframes appear-right{
-    from{
+    0%{
         transform: translateX(-100%);
     }
-    to{
+    100%{
         transform: translateX(0%);
     }
 }
 /*////////////////////////////////////////////////
 //UNIVERSE-TABPANE-PRODUCT////////////////////////
 ////////////////////////////////////////////////*/
-/* ##Price */
 
-
-.universe-span-price {
-    font-size: 15pt;
-}
-/* !Price */
-.universe-span-product {
+.foxv-span-product {
     justify-content: center;
     display: flex;
 }
 
-.universe-span-product-new-name {
+.foxv-span-product-new-name {
     color: black;
-    font-size: 15pt;
+    font-size: 1.1rem;
 }
 
 
-.universe-span-product-new-price-new {
+.foxv-span-product-new-price-new {
     color: black;
     font-weight: bold;
 }   
 
-.universe-span-product-new-price-old {
-    color: darkgrey;
+.foxv-span-product-new-price-old {
+    color: red;
+    font-size: 0.85rem;
     text-decoration: line-through;
 }
 
 
-.universe-price-bg {
+.foxv-price-bg {
     background-color: black;
 }
 
-.universe-tab-pane-block {
+.foxv-tab-pane-block {
     margin-bottom: 40px;
 }
 
 /* ver2 */
 
-.universe-tab-pane-product img {
+.foxv-tab-pane-product img {
     width: 100%;
 }
 
-.universe-product-item {
+.foxv-product-item {
     padding: 10px;
 }
 
@@ -411,7 +606,7 @@ span#btn-slide {
     border: 1px solid transparent;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
-    background-color: #ddd;
+    background-color: #f8f9fa ;
 }
 .nav-tabs .nav-link.active {
     color: white;
@@ -426,45 +621,45 @@ span#btn-slide {
 .niverse-cover-item {
     margin-bottom:30px;
 }
-.universe-title {
+.foxv-title {
     margin: 10px;
 }
-.universe-figure img {
+.foxv-figure img {
     width: 100%;
     height: auto;
 }
 
-.universe-a, .universe-a:hover {/* Global */
+.foxv-a, .foxv-a:hover {/* Global */
     color: black;
     text-decoration: none;
 }
 
-.universe-cover img {
+.foxv-cover img {
     width: 100%;
     height: auto;
 }
 
-.universe-figure img {
+.foxv-figure img {
     width: 100%;
     height: auto;
 }
 
-.universe-h3 {
+.foxv-h3 {
     font-size: 13pt;
 }
 
-.universe-h3-product {
+.foxv-h3-product {
     font-size: 13pt;
     text-align: center;
 }
 @media (min-width: 321px) {
-    .universe-grid-item{
+    .foxv-grid-item{
         margin: 0px 50px 0px 50px;
     }
 }
 
 @media (min-width: 768px) {
-    .universe-grid-item{
+    .foxv-grid-item{
         margin: 0px;
     }
 }
@@ -472,7 +667,7 @@ span#btn-slide {
 //FOOTER//////////////////////////////////////////
 ////////////////////////////////////////////////*/
 
-.universe-ul a, .universe-ul a:hover, .footer-top p, .universe-footer-title {
+.foxv-ul a, .foxv-ul a:hover, .footer-top p, .foxv-footer-title {
     color: white;
     text-decoration: none;
 }
@@ -546,10 +741,10 @@ span#btn-slide {
     }
 }
 /*////////////////////////////////////////////////
-//RESPONTIVE//////////////////////////////////////
+//RESPONSIVE//////////////////////////////////////
 ////////////////////////////////////////////////*/
 @media (min-width: 321px) {
-    .universe-grid-item{
+    .foxv-grid-item{
         margin: 0px 50px 0px 50px;
     }
     section {
@@ -564,7 +759,7 @@ span#btn-slide {
 
 }
 @media (min-width: 768px) {
-    .universe-grid-item{
+    .foxv-grid-item{
         margin: 0px;
     }
     section {
@@ -587,3 +782,36 @@ footer {
 @media (min-width: 1600px) {
 
 }
+
+.foxv-animation-fade-in {
+	opacity: 1;
+	animation-name: animationFadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	animation-duration: 0.4s;
+}
+
+@keyframes animationFadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.foxv-animation-panel-right {
+    animation: animationPanelRight 0.4s forwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+@keyframes animationPanelRight {
+    0% {
+        transform: translate3d(60vw,0,0);
+    }
+    100% {
+        transform: translate3d(0,0,0);
+    }
+    
+
+}
+
