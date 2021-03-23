@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/taipham/Documents/FoxvProject/venv"
+VIRTUAL_ENV="/Users/taipham/Desktop/Projects/tai/FoxvProject/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
