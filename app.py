@@ -3,7 +3,6 @@ import json
 import re
 import os
 import sys
-from IPython.display import HTML
 import pymysql
 import pandas as pd
 from flask_mail import Mail , Message
