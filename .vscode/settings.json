@@ -1,0 +1,6 @@
+{
+    "git.ignoreLimitWarning": true,
+    "python.pythonPath": "/Users/taipham/Desktop/Projects/tai/FoxvProject/venv/bin/python3",
+    "cmake.configureOnOpen": false,
+    "liveServer.settings.port": 5501
+}
