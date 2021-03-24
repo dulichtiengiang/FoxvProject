@@ -4,7 +4,6 @@ import re
 import os
 import sys
 import pymysql
-import pandas as pd
 from flask_mail import Mail , Message
 from flask_sqlalchemy import SQLAlchemy
 from flaskext.mysql import MySQL
