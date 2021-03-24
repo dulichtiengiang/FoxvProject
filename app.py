@@ -15,17 +15,17 @@ app = Flask(__name__ , static_folder = 'static' , template_folder = 'templates')
 
 ####### MYSQL CONFIG ###############################
 app.config['SECRET_KEY'] = '123giadinh'
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+app.config['MYSQL_DATABASE_HOST'] = 'sql5.freemysqlhosting.net'
 app.config['MYSQL_DATABASE_PORT'] = 3306
-app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = '123giadinh'
-app.config['MYSQL_DATABASE_DB'] = 'control'
+app.config['MYSQL_DATABASE_USER'] = 'sql5401275'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'uWAC5qFXMh'
+app.config['MYSQL_DATABASE_DB'] = 'sql5401275'
 app.config['MYSQL_DATABASE_CHARSET'] = 'utf8mb4'
 mysql = MySQL()
 mysql.init_app(app)
 
 ########### SQLALCHEMY CONFIG ################################
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123giadinh@localhost/control'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://sql5401275:uWAC5qFXMh@sql5.freemysqlhosting.net/sql5401275'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
