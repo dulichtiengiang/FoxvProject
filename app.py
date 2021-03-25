@@ -23,7 +23,7 @@ mysql = MySQL()
 mysql.init_app(app)
 
 ########### SQLALCHEMY CONFIG ################################
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://sql5401275:uWAC5qFXMh@sql5.freemysqlhosting.net/sql5401275'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
