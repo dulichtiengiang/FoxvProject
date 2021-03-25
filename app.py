@@ -164,7 +164,8 @@ def register():
             
             user = User(email , password , last_name , first_name , gender)
             db.session.add(user)
-            db.session.commit()    
+            db.session.commit()
+            
             ##### Sent Email ##333333
             
             msg = Message('Email Activation' , sender="ngatran12256@gmail.com" , recipients=[email])
